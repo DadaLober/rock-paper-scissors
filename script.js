@@ -1,6 +1,42 @@
 let computerScore = 0;
 let playerScore = 0; 
 
+function playGame() {
+const computerSelection = getComputerChoice();
+const playerSelection = getPlayerChoice();
+playRound(computerSelection,playerSelection);
+
+const computerSelection2 = getComputerChoice();
+const playerSelection2 = getPlayerChoice();
+playRound(computerSelection2,playerSelection2);
+
+const computerSelection3 = getComputerChoice();
+const playerSelection3 = getPlayerChoice();
+playRound(computerSelection3,playerSelection3);
+
+const computerSelection4 = getComputerChoice();
+const playerSelection4 = getPlayerChoice();
+playRound(computerSelection4,playerSelection4);
+
+const computerSelection5 = getComputerChoice();
+const playerSelection5 = getPlayerChoice();
+playRound(computerSelection5,playerSelection5);
+
+declareWinner();
+}
+
+function declareWinner() {
+    if (playerScore === computerScore) {
+        console.log(`Match ended in a draw! Both You and Computer score ${playerScore}`)
+    }
+    else if (playerScore > computerScore) {
+        console.log(`You win! with the score of ${playerScore}`)
+    }
+    else {
+        console.log(`Computer wins! with the score of ${computerScore}}`)
+    }
+}
+
 function playRound(computerChoice, playerChoice) {
     switch (playerChoice) {
     case "rock":
@@ -47,11 +83,6 @@ function playRound(computerChoice, playerChoice) {
     }
 }
 
-const computerSelection = getComputerChoice();
-const playerSelection = getPlayerChoice();
-
-playRound(computerSelection, playerSelection)
-
 function getComputerChoice() {
     const randomNumber = Math.random();
     console.log(`computer val: ${randomNumber}`);
@@ -71,5 +102,7 @@ function getPlayerChoice() {
     const promptResult = prompt("What do you want to play? (rock, paper, scissors):");
     return promptResult.toLowerCase();
 }
+
+playGame();
 
 console.log(`computerScore: ${computerScore}, playerScore ${playerScore}`)
