@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    font-family: "Arial", sans-serif;
+    background-color: #e1f5fe;
+}
+
+.rules-container,
+.title-container {
+    margin: 24px;
+}
+
+.title-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.content-container p {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.pokemon-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pokemon-buttons button {
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.score-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.score-container h2 {
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.fight-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #9c27b0, #e91e63);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rules-container ul li {
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    margin: 8px 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+.rules-container h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}

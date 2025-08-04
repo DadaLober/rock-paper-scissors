@@ -3,24 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="script.js" defer></script>
         <title>Pokemon RPS</title>
     </head>
     <body>
-        <div>
+        <div class="title-container">
             <h1>Pokemon RPS</h1>
+        </div>
+        <div class="content-container">
             <p>Select your choice</p>
+            <div class="pokemon-buttons">
+                <button>Charmander</button>
+                <button>Squirtle</button>
+                <button>Bulbasaur</button>
+            </div>
+            <div class="choices-display"></div>
+            <div class="result-display"></div>
+            <div class="score-container">
+                <h2>You: 0</h2>
+                <button class="fight-button">Let's Fight!</button>
+                <h2>Bot: 0</h2>
+            </div>
         </div>
-        <div>
-            <button>Charmander</button>
-            <button>Squirtle</button>
-            <button>Bulbasaur</button>
-        </div>
-        <div>
-            <h2>You: 0</h2>
-            <h2>Computer: 0</h2>
-            <button>Let's Fight</button>
-        </div>
-        <div>
+        <div class="rules-container">
             <h3>Rules</h3>
             <ul>
                 <li>Charmander beats Bulbasaur</li>
@@ -29,5 +35,4 @@
             </ul>
         </div>
     </body>
-    <script src="script.js" defer></script>
 </html>
