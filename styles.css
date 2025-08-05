@@ -17,7 +17,7 @@ body {
 
 .rules-container,
 .title-container {
-    margin: 24px;
+    margin: 16px;
 }
 
 /* Title section */
@@ -99,6 +99,10 @@ body {
     min-height: 40px;
     font-size: 1.1rem;
     font-weight: bold;
+}
+
+.choices-display {
+    min-height: 80px;
 }
 
 .result-display {
