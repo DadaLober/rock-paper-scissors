@@ -3,20 +3,38 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Play Pokemon Rock Paper Scissors with Charmander, Squirtle, and Bulbasaur"
+        />
+        <link rel="icon" href="assets/pokeball.svg" type="image/svg+xml" />
         <link rel="stylesheet" href="./styles.css" />
         <script src="script.js" defer></script>
         <title>Pokemon RPS</title>
     </head>
     <body>
         <div class="title-container">
-            <h1>Pokemon RPS</h1>
+            <h1>
+                <span class="pokeball-icon" aria-hidden="true"></span>
+                Pokemon RPS
+            </h1>
         </div>
+
         <div class="content-container">
             <p>Select your choice</p>
             <div class="pokemon-buttons">
-                <button>Charmander</button>
-                <button>Squirtle</button>
-                <button>Bulbasaur</button>
+                <button
+                    class="pokemon-btn pokemon-btn--charmander"
+                    aria-label="Choose Charmander"
+                ></button>
+                <button
+                    class="pokemon-btn pokemon-btn--squirtle"
+                    aria-label="Choose Charmander"
+                ></button>
+                <button
+                    class="pokemon-btn pokemon-btn--bulbasaur"
+                    aria-label="Choose Charmander"
+                ></button>
             </div>
             <div class="choices-display"></div>
             <div class="result-display"></div>
@@ -26,12 +44,61 @@
                 <h2>Bot: 0</h2>
             </div>
         </div>
+
         <div class="rules-container">
             <h3>Rules</h3>
             <ul>
-                <li>Charmander beats Bulbasaur</li>
-                <li>Squirtle beats Charmander</li>
-                <li>Bulbasaur beats Squirtle</li>
+                <li>
+                    <span
+                        class="rule-icon rule-icon--charmander"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="pokemon-name pokemon-name--fire"
+                        >Charmander</span
+                    >
+                    beats
+                    <span class="pokemon-name pokemon-name--grass"
+                        >Bulbasaur</span
+                    >
+                    <span
+                        class="rule-icon rule-icon--bulbasaur"
+                        aria-hidden="true"
+                    ></span>
+                </li>
+                <li>
+                    <span
+                        class="rule-icon rule-icon--squirtle"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="pokemon-name pokemon-name--water"
+                        >Squirtle</span
+                    >
+                    beats
+                    <span class="pokemon-name pokemon-name--fire"
+                        >Charmander</span
+                    >
+                    <span
+                        class="rule-icon rule-icon--charmander"
+                        aria-hidden="true"
+                    ></span>
+                </li>
+                <li>
+                    <span
+                        class="rule-icon rule-icon--bulbasaur"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="pokemon-name pokemon-name--grass"
+                        >Bulbasaur</span
+                    >
+                    beats
+                    <span class="pokemon-name pokemon-name--water"
+                        >Squirtle</span
+                    >
+                    <span
+                        class="rule-icon rule-icon--squirtle"
+                        aria-hidden="true"
+                    ></span>
+                </li>
             </ul>
         </div>
     </body>

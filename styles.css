@@ -9,9 +9,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    min-height: 100vh;
+    color: white;
     font-family: "Arial", sans-serif;
-    background-color: #e1f5fe;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .rules-container,
@@ -19,32 +20,65 @@ body {
     margin: 24px;
 }
 
+/* Title section */
 .title-container h1 {
-    font-size: 2.5rem;
-    color: #333;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.pokeball-icon {
+    width: 40px;
+    height: 40px;
+    background-image: url("assets/pokeball.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+/* Main section */
 .content-container {
-    flex: 1;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
 }
 
 .content-container p {
     font-size: 24px;
-    color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .pokemon-buttons {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.pokemon-btn {
+    width: 80px;
+    height: 80px;
+    border: 1px solid;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pokemon-btn--charmander {
+    background-image: url("assets/charmander.svg");
+    background-color: #ffa07a;
+}
+.pokemon-btn--squirtle {
+    background-image: url("assets/squirtle.svg");
+    background-color: #add8e6;
+}
+.pokemon-btn--bulbasaur {
+    background-image: url("assets/bulbasaur.svg");
+    background-color: #98fb98;
 }
 
 .pokemon-buttons button {
@@ -54,22 +88,35 @@ body {
     cursor: pointer;
 }
 
+/* Game section */
+.choices-display,
+.result-display {
+    margin: 20px 0;
+    min-height: 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.result-display {
+    font-size: 1.3rem;
+}
+
+/* Score section */
 .score-container {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .score-container h2 {
-    color: #333;
-    font-size: 1.3rem;
+    font-size: 20px;
 }
 
 .fight-button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 10px 15px;
+    font-size: 20px;
     background: linear-gradient(45deg, #9c27b0, #e91e63);
     color: white;
     border: none;
@@ -78,18 +125,68 @@ body {
     cursor: pointer;
 }
 
-.rules-container ul li {
-    text-decoration: none;
-    list-style-type: none;
-    text-align: center;
-    margin: 8px 0;
-    color: #555;
-    font-size: 1rem;
+/* Rules section */
+.rules-container {
+    max-width: min(600px, 95vw);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
 }
 
 .rules-container h3 {
     text-align: center;
-    color: #333;
     margin-bottom: 15px;
-    font-size: 1.4rem;
+    font-size: 20px;
+}
+
+.rules-container ul li {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 8px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.rules-container ul li img {
+    flex-shrink: 0;
+}
+
+.rule-icon {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.rule-icon--charmander {
+    background-image: url("assets/charmander.svg");
+}
+
+.rule-icon--squirtle {
+    background-image: url("assets/squirtle.svg");
+}
+
+.rule-icon--bulbasaur {
+    background-image: url("assets/bulbasaur.svg");
+}
+
+.pokemon-name--fire {
+    color: #ffa07a;
+    font-weight: 500;
+}
+
+.pokemon-name--water {
+    color: #add8e6;
+    font-weight: 500;
+}
+
+.pokemon-name--grass {
+    color: #98fb98;
+    font-weight: 500;
 }
