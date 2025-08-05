@@ -66,6 +66,17 @@ body {
     background-size: 75%;
     background-repeat: no-repeat;
     background-position: center;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.pokemon-btn.selected {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px gold;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .pokemon-btn--charmander {
@@ -79,13 +90,6 @@ body {
 .pokemon-btn--bulbasaur {
     background-image: url("assets/bulbasaur.svg");
     background-color: #98fb98;
-}
-
-.pokemon-buttons button {
-    padding: 15px 25px;
-    font-size: 16px;
-    border-radius: 20px;
-    cursor: pointer;
 }
 
 /* Game section */

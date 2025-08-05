@@ -1,3 +1,48 @@
+const buttonsContainer = document.querySelector(".pokemon-buttons");
+const choiceDisplay = document.querySelector(".choices-display");
+
+buttonsContainer.addEventListener("click", function (e) {
+    if (e.target.tagName === "BUTTON") {
+        const userChoice = e.target.id;
+
+        // Remove previous selection highlight
+        document.querySelectorAll(".pokemon-btn").forEach(btn =>
+            btn.classList.remove("selected")
+        );
+
+        // Highlight the selected button
+        e.target.classList.add("selected");
+
+        // Clear previous choice
+        choiceDisplay.innerHTML = "";
+
+        // Create a span for the styled Pokémon name
+        const styledName = document.createElement("span");
+        styledName.textContent = userChoice;
+
+        if (userChoice === "Charmander") {
+            styledName.classList.add("pokemon-name--fire");
+        } else if (userChoice === "Squirtle") {
+            styledName.classList.add("pokemon-name--water");
+        } else if (userChoice === "Bulbasaur") {
+            styledName.classList.add("pokemon-name--grass");
+        }
+
+        // Add text node and styled name together
+        const message = document.createElement("p");
+        message.append("You chose ", styledName, "!");
+
+        choiceDisplay.appendChild(message);
+    }
+});
+
+
+
+
+
+
+
+
 // let computerScore = 0;
 // let playerScore = 0; 
 
